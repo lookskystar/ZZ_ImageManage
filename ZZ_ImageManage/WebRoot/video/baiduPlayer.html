@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+     function startPlayer(){
+		var pos = BaiduPlayer.IsPause();
+		if(pos==1){
+			BaiduPlayer.Play();
+		}
+	 }
+
+	 function pausePlayer(){
+		var pos = BaiduPlayer.IsPlaying();
+		if(pos==1){
+			BaiduPlayer.Play();
+		}
+	 }
+
+	 function stopPlayer(){
+	    BaiduPlayer.Stop();
+	 }
+
+	 function all(){
+	    BaiduPlayer.FullScreen();
+	 }
+
+	 function singlePlay(path){
+	   BaiduPlayer['url'] =path;
+	   BaiduPlayer.Play();
+	 }
+
+	  
+	 //多个视频连续播放
+	 function multiPlay(){
+			 var i=1;
+			 var urlArray=['http://192.168.1.108:8080/video/02-52-01.AVI','http://192.168.1.108:8080/video/test.AVI'];
+			 singlePlay(urlArray[0]);
+			 setInterval(function(){
+				 var state = BaiduPlayer.IsStop();
+				  if(state==1&&i<=urlArray.length-1){
+					  singlePlay(urlArray[i]);
+					  i++;
+				   }
+			 },1000);
+	  }
+
+
+	 function getStatus(){
+	 //http://192.168.1.122:8080/video/test.AVI
+	   alert("pause-->"+BaiduPlayer.IsPause());
+	   alert("stop-->"+BaiduPlayer.IsStop());
+	 }
+  </script>
+ </head>
+
+ <body>
+ <!--
+  <object classid="clsid:02E2D748-67F8-48B4-8AB4-0A085374BB99" width="800" height="400" id="BaiduPlayer" name="BaiduPlayer" onError=if(window.confirm('请您先安装百度影音软件,然后刷新本页才可以正常播放.')){window.open('http://player.baidu.com')}else{self.location='http://player.baidu.com'}><PARAM NAME='URL' VALUE='http://192.168.1.122:8080/video/02-52-01.AVI'><PARAM NAME='Autoplay' VALUE='1'></object>-->
+
+  <input type="button" value="开始" onclick="startPlayer();"/>
+  <input type="button" value="播放" onclick="pausePlayer();"/>
+  <input type="button" value="暂停" onclick="stopPlayer();"/>
+  <input type="button" value="得到状态" onclick="getStatus();"/>
+  <input type="button" value="跳转播放" onclick="singlePlay('http://192.168.1.108:8080/video/02-52-01.AVI');"/>
+  <input type="button" value="多个连播" onclick="multiPlay();"/>
+
+  <script language="javascript">
+	var BdPlayer = new Array();
+	BdPlayer['time'] = 8;//缓冲广告展示时间(如果设为0,则根据缓冲进度自动控制广告展示时间)
+	BdPlayer['buffer'] = 'http://192.168.1.108:8080/bdyy/buffer.html';//贴片广告网页地址
+	BdPlayer['pause'] = 'http://192.168.1.108:8080/bdyy/pause.html';//暂停广告网页地址
+	BdPlayer['end'] = 'http://192.168.1.108:8080/bdyy/end.html';//影片播放完成后加载的广告
+	BdPlayer['tn'] = '12345678';//播放器下载地址渠道号
+	BdPlayer['width'] = 800;//播放器宽度(只能为数字)
+	BdPlayer['height'] = 550;//播放器高度(只能为数字)
+	BdPlayer['showclient'] = 1;//是否显示拉起拖盘按钮(1为显示 0为隐藏)
+	BdPlayer['url'] = '';//当前播放任务播放地址
+	BdPlayer['nextcacheurl'] = '';//下一集播放地址(没有请留空)
+	BdPlayer['lastwebpage'] = '';//上一集网页地址(没有请留空)
+	BdPlayer['nextwebpage'] = '';//下一集网页地址(没有请留空)
+  </script>
+<script language="javascript" src="js/player.js" charset="utf-8"></script>
+ </body>
+</html>
+

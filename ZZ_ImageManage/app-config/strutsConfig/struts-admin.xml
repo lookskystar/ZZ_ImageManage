@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="admin" extends="common" namespace="/">
+	<!-- 人员管理 -->
+		<action name="usersAction" class="usersAction">
+	  		<result name="userindex">admin/user/userindex.jsp</result>
+			<result name="users">admin/user/users.jsp</result>
+			<result name="adddictteams">admin/user/adddictteams.jsp</result>
+			<result name="editdictteams">admin/user/editdictteams.jsp</result>
+			<result name="updateuserbz">admin/user/updateuserbz.jsp</result>
+			<result name="adduser">admin/user/adduser.jsp</result>
+			<result name="userinfo">admin/user/userinfo.jsp</result>
+			<result name="edituser">admin/user/edituser.jsp</result>
+	  	</action>
+	  	
+	<!-- 角色管理 -->  	
+	  	<action name="rolesAction" class="rolesAction">
+	  		<result name="roles">admin/role/roles.jsp</result>
+			<result name="addrole">admin/role/addroles.jsp</result>
+			<result name="editrole">admin/role/editroles.jsp</result>
+			<result name="topower">admin/role/topower.jsp</result>
+	  	</action>
+	  	
+	<!-- 删除管理 -->  	
+	  	<action name="delAction" class="delAction">
+			<result name="delListInput">admin/delrec/dellist.jsp</result>
+	  	</action>
+	
+	
+	<!-- 机车管理 -->  	
+	  	<action name="dictJcAction" class="dictJcAction">
+			<result name="listDictJc">admin/dictjc/list_dictjc.jsp</result>
+			<result name="adddictjcinput">admin/dictjc/add_dictjc.jsp</result>
+			<result name="editdictjcinput">admin/dictjc/edit_dictjc.jsp</result>
+	  	</action>
+	
+	<!-- 计划管理 -->  	
+	  	<action name="planAction" class="planAction">
+			<result name="trainPlanInput">admin/plan/planlist.jsp</result>
+			<result name="addPlanInput">admin/plan/add_plan.jsp</result>
+			<result name="updatePlanInput">admin/plan/update_plan.jsp</result>
+	  	</action>
+	  	
+	 </package>
+</struts>

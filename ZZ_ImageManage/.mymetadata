@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="DC_ImageManage"
+  id="myeclipse.1366869487980"
+  context-root="/image"
+  j2ee-spec="5.0"
+  archive="DC_ImageManage.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

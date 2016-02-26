@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="common" extends="struts-default">
+		<!-- 
+	    <interceptors>
+			<interceptor name="exceptionInterceptor" class="com.repair.common.util.ExceptionInterceptor"></interceptor>
+			<interceptor-stack name="myDefaultStack">       
+	        	<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="exceptionInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+		 -->
+		 <interceptors>
+		   <interceptor name="sessionInterceptor" class="com.image.common.util.SessionInterceptor"></interceptor>
+		   <interceptor-stack name="myDefaultStack">
+		      <interceptor-ref name="defaultStack"/>
+		      <interceptor-ref name="sessionInterceptor"/>
+		   </interceptor-stack>
+		 </interceptors>
+		 <default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+		<global-results>
+			<result name="redirect_login" type="redirect">redirect_login.jsp</result>
+		</global-results>
+	</package>
+</struts>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="set" extends="common" namespace="/">
+	  	<action name="presetImage" class="presetImageAction">
+	  	    <result name="presetList">set/preset_list.jsp</result>
+	  	    <result name="inputAddProcedure">set/add_preset.jsp</result>
+	  	    <result name="updatePresetInput">set/update_preset.jsp</result>
+	  	    <result name="presetImageUplodInput">set/preset_image_upload.jsp</result>
+	  	    <result name="stepUpdate">set/step_update.jsp</result>
+	  	</action>
+	  	
+	</package>
+</struts>

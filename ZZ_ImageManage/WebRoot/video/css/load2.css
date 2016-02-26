@@ -1,0 +1,174 @@
+.B-main {
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	background:#000;
+}
+.B-box * {
+	margin:0 auto;
+	padding:0 auto;
+	font-size:12px;
+	color:#FFFFFF
+}
+.B-box-s {
+	width:612px;
+	height:467px;
+	background:url(load_bj.png);
+	margin:0 auto;
+	padding:0 auto;
+	text-align:center;
+	text-align:center;
+	overflow:hidden;
+	position:relative
+}
+.B-box-s .B-logo {
+	width:461px;
+	height:112px;
+	background:url(load_logo_down.jpg) no-repeat;
+	margin-top:81px;
+	clear:both
+}
+.B-box-s .B-btn-bg {
+	width:403px;
+	height:63px;
+	background:url(load_btnbg.jpg) no-repeat;
+	clear:both;
+	text-align:center;
+	padding-top:22px
+}
+.B-box-s .B-btn-bg button {
+	width:172px;
+	height:44px;
+	background:url(load_btn.gif) no-repeat;
+	display:block;
+	border:0;
+	cursor:pointer
+}
+.B-box-0 {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    background:red;
+    height:87px;
+    width:100%;
+    background:url(bg.png) repeat-x;
+}
+
+.B-box-0-left {
+    float: left;
+    height:87px;
+
+    bottom:0px;
+    background:url(bg_left.png) left bottom  no-repeat;
+}
+.B-box-0-center{
+    float: left;
+    height:20px;
+    bottom:0px;
+    display: block;
+    overflow-x: hidden;
+}
+.B-box-0-right {
+    float: right;
+    height:87px;
+    width:298px;
+    bottom:0px;
+    background:url(bg_right.png) right bottom  no-repeat;
+}
+.B-box-0 .B-title{
+    text-align: center;
+     width:auto;
+    margin-top:22px;
+    margin-left:100px;
+    height:20px;
+    line-height: 20px;
+    overflow: hidden;
+
+ }
+.B-box-0 .B-title img{
+ margin-right:50px;
+}
+.B-box-l {
+	width:612px;
+	height:467px;
+	background:url(load_bj.png);
+	margin:0 auto;
+	padding:0 auto;
+	text-align:center;
+	text-align:center;
+	overflow:hidden;
+	position:relative
+}
+.B-box-l .B-logo {
+	width:403px;
+	height:100px;
+	background:url(load_logo_ing.png) no-repeat;
+	margin-top:95px;
+	clear:both;
+}
+.B-box-l .B-title {
+	font-size:14px;
+	height:28px;
+	line-height:28px;
+	text-align:left;
+	padding-left:81px
+}
+.B-box-l .B-title span {
+	float:right;
+	padding-right:80px
+}
+.B-box-l .B-title #B-loadnum {
+	color:#ffaf00
+}
+.B-box-l .B-loadnum {
+	color:#FF3300
+}
+.B-load {
+
+	overflow:hidden;
+	position:relative
+}
+.B-box-l .B-load p {
+	margin:0;
+	padding:0;
+	height:12px
+}
+.B-box-l .B-load #B-load-l {
+	width:5px;
+	background:url(load_left.gif) no-repeat;
+	float:left
+}
+.B-box-l .B-load #B-load-m {
+	width:440px;
+	background:url(load_middle.gif) repeat-x;
+	float:left;
+	overflow:hidden
+}
+.B-box-l .B-load #B-load-m-on1 {
+	width:0;
+	background:url(load_middle_on.gif) repeat-x;
+	position:absolute;
+	left:5px
+}
+.B-box-l .B-load #B-load-m-on2 {
+	width:0;
+	background:url(load_middle_on.gif) repeat-x;
+	position:absolute;
+	left:225px
+}
+.B-box-l .B-load #B-load-r {
+	width:5px;
+	background:url(load_right.gif) no-repeat;
+	float:right
+}
+.B-box-l .B-tips {
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	color:#FFAF00;
+	font-size:14px
+}
+.B-box-l .B-tips a {
+	color:#FFAF00;
+	text-decoration:underline;
+}
